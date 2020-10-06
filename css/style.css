@@ -583,7 +583,6 @@ a.headeremail:hover {
 .wheel {
 	position: relative;
 	z-index: 10;
-	/* top: -10px; */
 }
 .tire {
 	background-color: rgb(0, 0, 0);
