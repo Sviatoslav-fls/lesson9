@@ -1,0 +1,754 @@
+@font-face {
+	font-family: "Futura PT";
+	src: url("../fonts/FuturaPT-Book.woff2") format("woff2"), url("../fonts/FuturaPT-Book.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+ol li,
+ul li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+	font-size: 14px;
+	line-height: 1;
+	font-family: "Gilroy";
+}
+/* -------------------------------------------------------------------------------------------------------------------------- */
+.wrapper {
+	min-height: 700px;
+	overflow: hidden;
+}
+.header {
+	padding: 35px 0px 15px 0px;
+	position: fixed;
+	width: 100%;
+	background: #fafafb;
+	z-index: 50;
+}
+.container {
+	max-width: 1140px;
+	margin: 0px auto;
+}
+.headertop {
+	margin: 0px 0px 35px 0px;
+}
+.headercompany {
+	display: inline-block;
+	margin: 0px 90px 0px 0px;
+	position: relative;
+	top: 6px;
+}
+.headerlogo {
+	max-width: 130px;
+	position: relative;
+	top: 3px;
+}
+.headerlogo img {
+	max-width: 100%;
+}
+.headerlogo::after {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 40px;
+	background: #89afef;
+	margin: 0px 0px 0px 30px;
+}
+.headerdescr {
+	display: inline-block;
+	font-weight: 500;
+	line-height: 16px;
+	color: #5d5d5d;
+	max-width: 173px;
+	margin: 0px 0px 0px 25px;
+}
+.headersocial {
+	display: inline-block;
+	margin: 0px 106px 0px 0px;
+	position: relative;
+	top: 6px;
+}
+.headersocial a {
+	margin: 0px 8px 0px 0px;
+}
+.headersocial a:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.whatsapp {
+	display: inline-block;
+	height: 43px;
+	width: 43px;
+	border-radius: 50%;
+	box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+	background: url("../img/icons/WhatsApp.svg") 50% 50% no-repeat #2dd038;
+}
+.viber {
+	display: inline-block;
+	height: 43px;
+	width: 43px;
+	border-radius: 50%;
+	box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+	background: url("../img/icons/viber.svg") 50% 50% no-repeat #7b519d;
+}
+.telegram {
+	display: inline-block;
+	height: 43px;
+	width: 43px;
+	border-radius: 50%;
+	box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+	background: url("../img/icons/telegram.svg") 50% 50% no-repeat #5bbaf0;
+}
+.telegram:hover,
+.viber:hover,
+.whatsapp:hover {
+	box-shadow: -2px 2px 2px 0px rgba(70, 44, 17, 0.8);
+}
+.telegram:active,
+.viber:hover,
+.whatsapp:active {
+	box-shadow: none;
+}
+.headeractions {
+	display: inline-block;
+	max-width: 195px;
+	margin: 0px 25px 0px 0px;
+	position: relative;
+	top: 3px;
+}
+.headerphone {
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+	color: #333333;
+	width: 16px;
+	height: 16px;
+	background: url("../img/icons/phone.svg") left 3px no-repeat;
+	padding: 0px 0px 0px 25px;
+}
+.headeremail {
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 20px;
+	color: #333333;
+	background: url("../img/icons/email.svg") left 5px no-repeat;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 0px 28px;
+}
+a.headerphone:hover,
+a.headeremail:hover {
+	text-decoration: underline;
+}
+.headerbtn {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 44px;
+	text-align: center;
+	color: #ffffff;
+	background: linear-gradient(90deg, #f6bd60 0%, #e88952 100%);
+	box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+	border-radius: 3px;
+	padding: 0px 25px;
+	position: relative;
+	bottom: 8px;
+}
+.headerbtn:hover {
+	box-shadow: -2px 2px 5px 0px rgba(70, 44, 17, 0.8);
+}
+.headerbtn:active {
+	box-shadow: none;
+}
+.headermenu {
+}
+.headerlist {
+}
+.headerlist li {
+	display: inline-block;
+	margin: 0px 53px 0px 0px;
+}
+.headerlist li:last-child {
+	margin: 0px 0px 0px 0px;
+}
+.headerlist li a:hover {
+	border-bottom: 2px solid rgb(231, 141, 98);
+	padding: 0px 0px 1px 0px;
+	color: rgb(231, 141, 98);
+}
+.headerlink {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: uppercase;
+	color: #333333;
+}
+/* ------------------------------------------------------------- */
+.main {
+	padding: 250px 0px 180px 0px;
+	position: relative;
+	background: url("../img/bg.png") right bottom / 50% 100% no-repeat #fafafb;
+	max-height: 720px;
+}
+.maintitle {
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 51px;
+	color: #333333;
+	max-width: 670px;
+	margin: 0px 0px 35px 0px;
+}
+.mainsubtitle {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	color: #333333;
+	margin: 0px 0px 35px 0px;
+}
+.mainsubtitle span {
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 31px;
+	color: #333333;
+}
+.mainbtn {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background: linear-gradient(90deg, #87aff1 0%, #6c80cb 100%, #6c80cb 100%);
+	box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
+	border-radius: 3px;
+	display: inline-block;
+	padding: 0px 65px;
+	line-height: 50px;
+}
+.mainbtn:hover,
+.headerbtn:hover {
+	box-shadow: -2px 2px 5px 0px rgba(70, 44, 17, 0.8);
+}
+.mainbtn:active,
+.headerbtn:active {
+	box-shadow: none;
+}
+.mainimage {
+	max-width: 340px;
+	position: absolute;
+	bottom: 0;
+	left: 59%;
+}
+.mainimage img {
+	max-width: 100%;
+}
+/* ------------------------------------------------------------- */
+.auto {
+}
+.bg {
+	min-height: 900px;
+	background-color: rgba(5, 155, 5, 0.527);
+}
+.road {
+	padding-top: 50px;
+	background-color: rgb(99, 93, 93);
+	height: 400px;
+	position: relative;
+	z-index: 1;
+	top: 300px;
+	box-shadow: 0px 15px 10px 5px rgba(27, 26, 26, 0.87), 0px -3px 10px 2px rgba(27, 26, 26, 0.87);
+}
+.roadline {
+	background-color: white;
+	height: 30px;
+	position: relative;
+	z-index: 2;
+	top: 140px;
+}
+/* ------------------------------------------------------------------------------ */
+.carbody {
+	position: relative;
+}
+.carfront {
+	width: 250px;
+	height: 190px;
+	background-color: #e79213;
+	/* background-color: #4f738e; */
+	position: absolute;
+	z-index: 6;
+	left: 750px;
+	top: 00px;
+	border-radius: 0% 100% 0% 100% / 100% 40% 0% 0%;
+	border-left: 0.7px solid rgb(205, 218, 186);
+	border-bottom: 15px solid rgb(92, 3, 3);
+	box-shadow: 0px 2px 0px 1px rgba(92, 3, 3, 0.329);
+}
+.carcenter {
+	width: 650px;
+	height: 150px;
+	background-color: #e79213;
+	position: absolute;
+	z-index: 5;
+	bottom: -190px;
+	right: 390px;
+	border-bottom: 15px solid rgb(92, 3, 3);
+	box-shadow: 0px 2px 0px 1px rgba(92, 3, 3, 0.329);
+	border-radius: 20px 0 0 0;
+	/* border-radius: 13% 87% 100% 0% / 100% 100% 0% 0%; */
+	border-top: 15px solid rgba(0, 0, 0, 0.658);
+}
+.cartop {
+	width: 350px;
+	height: 150px;
+	/* background-color: #1e5e8f; */
+	background-color: #e79213;
+	position: absolute;
+	z-index: 5;
+	bottom: -55px;
+	right: 380px;
+	/* border-top: 100px solid #000; */
+	border-radius: 15px 150px 0 0;
+	/* border-radius: 100px/200px 200px/100px 0 0; */
+}
+.seamback {
+	width: 0.7px;
+	height: 150px;
+	background-color: rgb(205, 218, 186);
+	position: absolute;
+	z-index: 6;
+	top: 41px;
+	left: 410px;
+}
+.door {
+	width: 250px;
+	height: 270px;
+	background-color: transparent;
+	position: absolute;
+	z-index: 6;
+	top: -78px;
+	left: 500px;
+	border-radius: 15px 150px 0 0;
+	border-top: 1px solid rgb(205, 218, 186);
+	border-right: 1px solid rgb(205, 218, 186);
+	border-left: 1px solid rgb(205, 218, 186);
+}
+.windowdoor {
+	width: 210px;
+	height: 110px;
+	background: linear-gradient(
+		45deg,
+		rgba(59, 103, 158, 1) 0%,
+		rgba(43, 136, 217, 1) 50%,
+		rgba(32, 124, 202, 1) 51%,
+		rgba(125, 185, 232, 1) 100%
+	);
+	position: absolute;
+	z-index: 8;
+	top: -67px;
+	left: 510px;
+	border-radius: 15px 120px 0 0;
+	border: 1px solid rgb(50, 51, 48);
+	border-bottom: 3px solid black;
+	box-shadow: 0px 0px 3px 1px rgb(41, 39, 39);
+}
+.windowdoor:hover {
+	background: rgba(255, 255, 0, 0.623) url("../img/aquarium.jpg") center 0 / cover no-repeat;
+	color: transparent;
+}
+.windowback {
+	text-align: center;
+	padding-top: 10px;
+	text-decoration: underline;
+	color: rgba(39, 30, 30, 0.226);
+	width: 65px;
+	height: 110px;
+	/* background-color: transparent; */
+	background: linear-gradient(
+		45deg,
+		rgba(59, 103, 158, 1) 0%,
+		rgba(43, 136, 217, 1) 50%,
+		rgba(32, 124, 202, 1) 51%,
+		rgba(125, 185, 232, 1) 100%
+	);
+	position: absolute;
+	z-index: 7;
+	top: -68px;
+	left: 425px;
+	border-radius: 15px;
+	box-shadow: inset 0px 0px 3px 3px rgb(41, 39, 39);
+}
+.windowback:hover {
+	background: rgba(255, 255, 0, 0.623) url("../img/worker.png") center 0 / contain no-repeat;
+	color: transparent;
+}
+.bumperfront {
+	width: 75px;
+	height: 60px;
+	background-color: black;
+	position: absolute;
+	z-index: 9;
+	top: 145px;
+	left: 83.3%;
+	border-radius: 0 15px 15px 0;
+	box-shadow: inset 0px 0px 13px 1px rgb(116, 108, 108);
+}
+.bumperback {
+	width: 50px;
+	height: 60px;
+	background-color: black;
+	position: absolute;
+	z-index: 9;
+	top: 133px;
+	left: 7%;
+	border-radius: 15px 5px 5px 15px;
+	box-shadow: inset 0px 0px 13px 1px rgb(116, 108, 108);
+}
+.headlight {
+	width: 40px;
+	height: 40px;
+	background: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(246, 246, 246, 1) 47%,
+		rgba(237, 237, 237, 1) 100%
+	);
+	position: absolute;
+	z-index: 12;
+	top: 72px;
+	left: 84.4%;
+	border-radius: 100% 0% 0% 100% / 53% 100% 0% 47%;
+	box-shadow: inset 5px 0px 2px 1px rgb(84, 88, 14);
+}
+.headlight:hover {
+	box-shadow: 250px 70px 80px 120px rgb(243, 243, 239);
+}
+.backlight {
+	width: 20px;
+	height: 50px;
+	background-color: rgb(184, 29, 8);
+	position: absolute;
+	z-index: 11;
+	top: 68px;
+	left: 8%;
+	border: 1px solid rgb(51, 1, 1);
+	border-radius: 5px 0 0 5px;
+}
+.backlight:hover {
+	box-shadow: -15px 0px 20px 10px rgb(245, 28, 12);
+	border-left: none;
+}
+.toplight {
+	width: 40px;
+	height: 40px;
+	background-color: rgb(21, 21, 22);
+	position: absolute;
+	z-index: 12;
+	top: -135px;
+	left: 51.4%;
+	border-radius: 100% 0% 0% 100% / 53% 100% 0% 47%;
+	border-right: 10px solid rgb(238, 210, 210);
+	box-shadow: inset 2px 0px 10px 1px rgb(160, 160, 145);
+}
+.toplight:hover {
+	box-shadow: 650px 250px 80px 150px rgb(145, 212, 233), 20px 10px 10px 10px rgb(145, 212, 233);
+}
+.topmigalka {
+	width: 50px;
+	height: 40px;
+	background-color: rgb(34, 167, 63);
+	position: absolute;
+	z-index: 12;
+	top: -135px;
+	left: 41.4%;
+	border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+	border-bottom: 10px solid rgb(4, 66, 18);
+	box-shadow: inset 2px 0px 10px 1px orange;
+}
+.topmigalka:hover {
+	box-shadow: 0px 0px 30px 20px rgb(34, 167, 63), inset 2px 0px 10px 1px orange;
+}
+
+.turnsignalfront {
+	width: 25px;
+	height: 35px;
+	background-color: yellow;
+	position: absolute;
+	z-index: 11;
+	top: 75px;
+	left: 84.5%;
+	border-radius: 100% 0% 0% 100% / 53% 100% 0% 47%;
+	box-shadow: inset 5px 0px 2px 1px rgb(84, 88, 14);
+	border-right: 1px solid gray;
+}
+.turnsignalfront:hover {
+	box-shadow: 5px 0px 20px 5px yellow;
+}
+.hand {
+	width: 50px;
+	height: 15px;
+	position: absolute;
+	z-index: 12;
+	background-color: #000;
+	border-radius: 8px 8px 3px 3px;
+	box-shadow: inset 0px 2px 3px 1px grey;
+	left: 45%;
+	top: 70px;
+}
+.hand:hover {
+	box-shadow: 0px 5px 30px 3px rgb(245, 240, 240);
+}
+.holder {
+	width: 10px;
+	height: 25px;
+	position: absolute;
+	z-index: 13;
+	background-color: #000;
+
+	border-radius: 7px 0px 0px 0px;
+	left: 50.9%;
+	top: -120px;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+.wheel {
+	position: relative;
+	z-index: 10;
+	/* top: -10px; */
+}
+.tire {
+	background-color: rgb(0, 0, 0);
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	position: relative;
+	z-index: 5;
+	left: 70%;
+	bottom: -100px;
+	box-shadow: -7px -7px 3px 5px rgb(41, 39, 39);
+	border: 3px dashed rgb(37, 34, 34);
+}
+.tire.tire2 {
+	left: 30%;
+	bottom: 45px;
+}
+.tire.tire3 {
+	left: 18%;
+	bottom: 45px;
+}
+.disk {
+	background-color: rgba(147, 180, 240, 0.973);
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 5;
+	left: 23%;
+	top: 23%;
+	box-shadow: 0px 0px 5px 3px rgb(178, 169, 241), inset -2px -2px 7px 3px rgba(46, 27, 216, 0.6);
+	border: 7px solid #2e1bd8b4;
+}
+.bolts {
+	background-color: rgb(238, 94, 94);
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 5;
+	left: 40%;
+	top: 40%;
+	box-shadow: 0px 0px 5px 3px rgb(178, 169, 241), inset -2px -2px 7px 3px rgba(46, 27, 216, 0.6);
+	border: 5.5px dotted #2e1bd8b4;
+}
+.arch {
+	background-color: rgb(204, 189, 189);
+	height: 170px;
+	width: 170px;
+	border-radius: 50% 50% 0 0;
+	position: absolute;
+	z-index: 7;
+	left: 68.64%;
+	bottom: -252px;
+	box-shadow: 0px 0px 5px 1px rgb(92, 3, 3), inset -2px -2px 7px 3px rgba(46, 27, 216, 0.6);
+	border: 2px solid rgb(92, 3, 3);
+}
+.arch.arch2 {
+	left: 16.64%;
+	bottom: -257px;
+}
+.patch {
+	background-color: rgb(99, 93, 93);
+	border-radius: 0 0 30px 20px;
+	height: 100px;
+	width: 200px;
+	position: absolute;
+	z-index: 8;
+	left: 67.5%;
+	bottom: -293px;
+}
+.patch.patch2 {
+	left: 15.5%;
+	bottom: -293px;
+}
+.patch.patch3 {
+	left: 77.5%;
+	bottom: -160px;
+	z-index: 3;
+}
+.patch.patch4 {
+	left: 2.5%;
+	bottom: -160px;
+	z-index: 3;
+}
+.patch.patch5 {
+	left: -20%;
+	bottom: -160px;
+	z-index: 3;
+	width: 100px;
+}
+.three {
+	position: relative;
+	z-index: 15;
+	top: -220px;
+	left: 36.9%;
+}
+
+.triangle {
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 70px solid green;
+	position: absolute;
+	z-index: 15;
+	top: 0;
+	left: 0;
+}
+
+.triangle2 {
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid green;
+	position: absolute;
+	top: -10px;
+	left: 9px;
+}
+.triangle3 {
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 30px solid green;
+	position: absolute;
+	top: -20px;
+	left: 19px;
+}
+.rectangle {
+	width: 15px;
+	height: 30px;
+	background-color: brown;
+	position: absolute;
+	z-index: 9;
+	top: 55px;
+	left: 27px;
+}
+.turnsignalside {
+	width: 40px;
+	height: 17px;
+	position: absolute;
+	z-index: 15;
+	top: 65px;
+	right: 29.5%;
+	background-color: yellow;
+	border-radius: 5px;
+	box-shadow: inset 0px 1px 7px 3px rgb(189, 189, 118);
+	border: 1px solid rgba(128, 128, 128, 0.685);
+}
+.turnsignalside:hover {
+	box-shadow: 0px 0px 17px 5px yellow;
+}
+.cargo {
+	position: relative;
+	z-index: 2;
+	top: -350px;
+	left: -320px;
+}
+.cargo1 {
+	background-color: rgb(238, 94, 94);
+	height: 150px;
+	width: 250px;
+	position: absolute;
+	z-index: 5;
+	left: 40%;
+	top: 40%;
+	box-shadow: 0px 0px 5px 3px rgb(178, 169, 241), inset -2px -2px 7px 3px rgba(46, 27, 216, 0.6);
+	border: 7px dashed #2e1bd8b4;
+}
+.cargo1:hover {
+	background: url("../img/smile1.jpeg") 0 0 / cover no-repeat;
+}
