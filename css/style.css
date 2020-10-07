@@ -86,7 +86,7 @@ body {
 }
 /* -------------------------------------------------------------------------------------------------------------------------- */
 .wrapper {
-	min-height: 700px;
+	min-height: 100%;
 	overflow: hidden;
 }
 .header {
@@ -169,13 +169,18 @@ body {
 	box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
 	background: url("../img/icons/telegram.svg") 50% 50% no-repeat #5bbaf0;
 }
-.telegram:hover,
-.viber:hover,
 .whatsapp:hover {
-	box-shadow: -2px 2px 2px 0px rgba(70, 44, 17, 0.8);
+	background: url("../img/icons/WhatsApp.svg") 50% 50% / 60% no-repeat #2dd038;
 }
+.viber:hover {
+	background: url("../img/icons/viber.svg") 50% 50% / 60% no-repeat #7b519d;
+}
+.telegram:hover {
+	background: url("../img/icons/telegram.svg") 50% 50% / 60% no-repeat #5bbaf0;
+}
+
 .telegram:active,
-.viber:hover,
+.viber:active,
 .whatsapp:active {
 	box-shadow: none;
 }
@@ -205,8 +210,12 @@ body {
 	padding: 0px 0px 0px 25px;
 	margin: 0px 0px 0px 28px;
 }
-a.headerphone:hover,
-a.headeremail:hover {
+.headerphone:hover {
+	background: url("../img/icons/phone.svg") left 3px / 10% no-repeat;
+	text-decoration: underline;
+}
+.headeremail:hover {
+	background: url("../img/icons/email.svg") left 5px / 12% no-repeat;
 	text-decoration: underline;
 }
 .headerbtn {
@@ -224,10 +233,7 @@ a.headeremail:hover {
 	bottom: 8px;
 }
 .headerbtn:hover {
-	box-shadow: -2px 2px 5px 0px rgba(70, 44, 17, 0.8);
-}
-.headerbtn:active {
-	box-shadow: none;
+	background: linear-gradient(340deg, #f6bd60 50%, #e88952 50%);
 }
 .headermenu {
 }
@@ -294,9 +300,8 @@ a.headeremail:hover {
 	padding: 0px 65px;
 	line-height: 50px;
 }
-.mainbtn:hover,
-.headerbtn:hover {
-	box-shadow: -2px 2px 5px 0px rgba(70, 44, 17, 0.8);
+.mainbtn:hover {
+	background: linear-gradient(340deg, #87aff1 50%, #6c80cb 50%);
 }
 .mainbtn:active,
 .headerbtn:active {
@@ -316,7 +321,7 @@ a.headeremail:hover {
 }
 .bg {
 	min-height: 900px;
-	background-color: rgba(5, 155, 5, 0.527);
+	background: url("../img/9237558.jpg") 0 0 / cover no-repeat;
 }
 .road {
 	padding-top: 50px;
@@ -324,8 +329,9 @@ a.headeremail:hover {
 	height: 400px;
 	position: relative;
 	z-index: 1;
-	top: 300px;
-	box-shadow: 0px 15px 10px 5px rgba(27, 26, 26, 0.87), 0px -3px 10px 2px rgba(27, 26, 26, 0.87);
+	top: 480px;
+	box-shadow: 0px 15px 10px 5px rgba(27, 26, 26, 0.87), 0px -3px 10px 2px rgba(27, 26, 26, 0.87),
+		inset 0px 7px 20px 3px rgba(218, 196, 196, 0.87);
 }
 .roadline {
 	background-color: white;
@@ -342,11 +348,10 @@ a.headeremail:hover {
 	width: 250px;
 	height: 190px;
 	background-color: #e79213;
-	/* background-color: #4f738e; */
 	position: absolute;
 	z-index: 6;
 	left: 750px;
-	top: 00px;
+	top: 0;
 	border-radius: 0% 100% 0% 100% / 100% 40% 0% 0%;
 	border-left: 0.7px solid rgb(205, 218, 186);
 	border-bottom: 15px solid rgb(92, 3, 3);
@@ -363,21 +368,17 @@ a.headeremail:hover {
 	border-bottom: 15px solid rgb(92, 3, 3);
 	box-shadow: 0px 2px 0px 1px rgba(92, 3, 3, 0.329);
 	border-radius: 20px 0 0 0;
-	/* border-radius: 13% 87% 100% 0% / 100% 100% 0% 0%; */
 	border-top: 15px solid rgba(0, 0, 0, 0.658);
 }
 .cartop {
 	width: 350px;
 	height: 150px;
-	/* background-color: #1e5e8f; */
 	background-color: #e79213;
 	position: absolute;
 	z-index: 5;
 	bottom: -55px;
 	right: 380px;
-	/* border-top: 100px solid #000; */
 	border-radius: 15px 150px 0 0;
-	/* border-radius: 100px/200px 200px/100px 0 0; */
 }
 .seamback {
 	width: 0.7px;
@@ -431,7 +432,6 @@ a.headeremail:hover {
 	color: rgba(39, 30, 30, 0.226);
 	width: 65px;
 	height: 110px;
-	/* background-color: transparent; */
 	background: linear-gradient(
 		45deg,
 		rgba(59, 103, 158, 1) 0%,
@@ -542,15 +542,16 @@ a.headeremail:hover {
 	height: 35px;
 	background-color: yellow;
 	position: absolute;
-	z-index: 11;
+	z-index: 12;
 	top: 75px;
-	left: 84.5%;
+	left: 84.4%;
 	border-radius: 100% 0% 0% 100% / 53% 100% 0% 47%;
 	box-shadow: inset 5px 0px 2px 1px rgb(84, 88, 14);
 	border-right: 1px solid gray;
 }
 .turnsignalfront:hover {
-	box-shadow: 5px 0px 20px 5px yellow;
+	box-shadow: 0px 0px 20px 5px yellow;
+	border-right: none;
 }
 .hand {
 	width: 50px;
@@ -647,32 +648,15 @@ a.headeremail:hover {
 .patch {
 	background-color: rgb(99, 93, 93);
 	border-radius: 0 0 30px 20px;
-	height: 100px;
+	height: 70px;
 	width: 200px;
 	position: absolute;
 	z-index: 8;
 	left: 67.5%;
-	bottom: -293px;
+	bottom: -263px;
 }
 .patch.patch2 {
 	left: 15.5%;
-	bottom: -293px;
-}
-.patch.patch3 {
-	left: 77.5%;
-	bottom: -160px;
-	z-index: 3;
-}
-.patch.patch4 {
-	left: 2.5%;
-	bottom: -160px;
-	z-index: 3;
-}
-.patch.patch5 {
-	left: -20%;
-	bottom: -160px;
-	z-index: 3;
-	width: 100px;
 }
 .three {
 	position: relative;
@@ -750,4 +734,18 @@ a.headeremail:hover {
 }
 .cargo1:hover {
 	background: url("../img/smile1.jpeg") 0 0 / cover no-repeat;
+}
+.mirror {
+	width: 30px;
+	height: 60px;
+	background-color: #e79213;
+	border: 1px solid grey;
+	position: absolute;
+	z-index: 12;
+	right: 36%;
+	top: -25%;
+	position: absolute;
+	z-index: 20;
+	box-shadow: 0px 0px 5px 1px rgb(178, 169, 241), inset 3px 2px 5px 2px grey;
+	border-radius: 51% 49% 79% 27%;
 }
