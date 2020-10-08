@@ -319,7 +319,7 @@ body {
 /* ------------------------------------------------------------- */
 .auto {
 }
-.bg {
+.wrap {
 	min-height: 900px;
 	background: url("../img/9237558.jpg") 0 0 / cover no-repeat;
 }
