@@ -335,10 +335,18 @@ body {
 }
 .roadline {
 	background-color: white;
-	height: 30px;
+	height: 20px;
 	position: relative;
 	z-index: 2;
 	top: 140px;
+}
+.roadline.roadline2 {
+	height: 10px;
+	top: -60px;
+}
+.roadline.roadline3 {
+	height: 10px;
+	top: 310px;
 }
 /* ------------------------------------------------------------------------------ */
 .carbody {
